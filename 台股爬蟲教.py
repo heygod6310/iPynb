@@ -16,3 +16,7 @@ df = pd.read_csv(StringIO(r.text.replace("=", "")),
 
 df.apply(lambda s: pd.to_numeric(s.astype(str).str.replace(",", "").replace("+", "1").replace("-", "-1"), errors='coerce'))
 df
+
+
+#多加一行列印標頭
+df.head()
